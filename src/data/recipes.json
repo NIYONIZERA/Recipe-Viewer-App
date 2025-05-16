@@ -1,0 +1,170 @@
+[
+    {
+      "id": 1,
+      "slug": "pancake",
+      "title": "Classic Pancakes",
+      "image": "/images/pancake.jpg",
+      "ingredients": [
+        "1 cup all-purpose flour",
+        "1 tbsp sugar",
+        "2 tsp baking powder",
+        "1 cup milk",
+        "1 egg",
+        "2 tbsp melted butter"
+      ],
+      "steps": [
+        "Mix flour, sugar, and baking powder in a bowl.",
+        "Whisk milk, egg, and butter in another bowl.",
+        "Combine wet and dry ingredients until smooth.",
+        "Heat a skillet over medium heat.",
+        "Pour 1/4 cup batter per pancake, cook until bubbles form, flip, and cook until golden."
+      ]
+    },
+    {
+      "id": 2,
+      "slug": "pizza",
+      "title": "Margherita Pizza",
+      "image": "/images/pizza.jpg",
+      "ingredients": [
+        "1 pizza dough",
+        "1/2 cup tomato sauce",
+        "1 cup mozzarella cheese",
+        "Fresh basil leaves",
+        "1 tbsp olive oil",
+        "Salt to taste"
+      ],
+      "steps": [
+        "Preheat oven to 475°F (245°C).",
+        "Roll out dough on a floured surface.",
+        "Spread tomato sauce over dough.",
+        "Sprinkle mozzarella and add basil leaves.",
+        "Drizzle with olive oil and season with salt.",
+        "Bake for 10-12 minutes until crust is golden."
+      ]
+    },
+    {
+      "id": 3,
+      "slug": "sushi",
+      "title": "California Sushi Roll",
+      "image": "/images/sushi.jpg",
+      "ingredients": [
+        "1 cup sushi rice",
+        "1 nori sheet",
+        "1/2 avocado, sliced",
+        "1/4 cup crab meat",
+        "1 cucumber, julienned",
+        "Soy sauce for dipping"
+      ],
+      "steps": [
+        "Cook sushi rice and let it cool.",
+        "Place nori on a bamboo mat, spread rice evenly.",
+        "Add avocado, crab, and cucumber in a line.",
+        "Roll tightly using the mat.",
+        "Slice into 8 pieces and serve with soy sauce."
+      ]
+    },
+    {
+      "id": 4,
+      "slug": "pasta",
+      "title": "Spaghetti Carbonara",
+      "image": "/images/pasta.jpg",
+      "ingredients": [
+        "200g spaghetti",
+        "2 eggs",
+        "100g pancetta",
+        "50g parmesan cheese",
+        "Black pepper",
+        "Salt"
+      ],
+      "steps": [
+        "Boil spaghetti in salted water until al dente.",
+        "Fry pancetta until crispy.",
+        "Whisk eggs with parmesan and pepper.",
+        "Drain pasta, mix with pancetta, then add egg mixture off heat.",
+        "Stir quickly to create a creamy sauce, serve immediately."
+      ]
+    },
+    {
+      "id": 5,
+      "slug": "salad",
+      "title": "Caesar Salad",
+      "image": "/images/salad.jpg",
+      "ingredients": [
+        "1 romaine lettuce, chopped",
+        "1/2 cup croutons",
+        "1/4 cup parmesan cheese, shaved",
+        "1/4 cup Caesar dressing",
+        "1 tsp lemon juice",
+        "Black pepper to taste"
+      ],
+      "steps": [
+        "Wash and chop romaine lettuce, place in a large bowl.",
+        "Add croutons and parmesan cheese.",
+        "Drizzle with Caesar dressing and lemon juice.",
+        "Toss to combine, season with black pepper.",
+        "Serve immediately."
+      ]
+    },
+    {
+      "id": 6,
+      "slug": "burger",
+      "title": "Classic Cheeseburger",
+      "image": "/images/burger.jpg",
+      "ingredients": [
+        "1/2 lb ground beef",
+        "1 burger bun",
+        "1 slice cheddar cheese",
+        "1 lettuce leaf",
+        "1 tomato slice",
+        "1 tbsp mayonnaise",
+        "Salt and pepper"
+      ],
+      "steps": [
+        "Form ground beef into a patty, season with salt and pepper.",
+        "Grill or cook patty on a skillet for 3-4 minutes per side.",
+        "Place cheese on patty during the last minute to melt.",
+        "Toast burger bun lightly.",
+        "Assemble with mayonnaise, lettuce, tomato, and patty, then serve."
+      ]
+    },
+    {
+      "id": 7,
+      "slug": "curry",
+      "title": "Chicken Curry",
+      "image": "/images/curry.jpg",
+      "ingredients": [
+        "1 lb chicken breast, cubed",
+        "1 onion, chopped",
+        "2 tbsp curry powder",
+        "1 cup coconut milk",
+        "1 cup diced tomatoes",
+        "2 tbsp vegetable oil",
+        "Salt to taste"
+      ],
+      "steps": [
+        "Heat oil in a pan, sauté onion until soft.",
+        "Add curry powder and cook for 1 minute.",
+        "Add chicken and cook until browned.",
+        "Stir in coconut milk and tomatoes, simmer for 15 minutes.",
+        "Season with salt and serve with rice."
+      ]
+    },
+    {
+      "id": 8,
+      "slug": "smoothie",
+      "title": "Berry Smoothie",
+      "image": "/images/smoothie.jpg",
+      "ingredients": [
+        "1 cup mixed berries (strawberries, blueberries)",
+        "1 banana",
+        "1 cup Greek yogurt",
+        "1/2 cup orange juice",
+        "1 tbsp honey"
+      ],
+      "steps": [
+        "Add berries, banana, yogurt, orange juice, and honey to a blender.",
+        "Blend until smooth, about 1 minute.",
+        "Pour into a glass and serve immediately."
+      ]
+    }
+]
