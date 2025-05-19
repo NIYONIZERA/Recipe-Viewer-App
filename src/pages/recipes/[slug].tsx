@@ -3,7 +3,6 @@ import { readFile } from 'fs/promises';
 import path from 'path';
 import Link from 'next/link';
 import { Recipe } from '../../lib/types';
-import { getStoredRecipes } from '../../lib/storage';
 
 // Generate static paths for static recipes
 export async function getStaticPaths() {
@@ -17,7 +16,7 @@ export async function getStaticPaths() {
 
   return {
     paths,
-    fallback: 'blocking', // Render custom recipes on-demand
+    fallback: false, // Only static recipes are supported
   };
 }
 
@@ -26,9 +25,8 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
   const filePath = path.join(process.cwd(), 'src', 'data', 'recipes.json');
   const jsonData = await readFile(filePath, 'utf-8');
   const recipes: Recipe[] = JSON.parse(jsonData);
-  const storedRecipes = getStoredRecipes();
 
-  const recipe = [...recipes, ...storedRecipes].find((r) => r.slug === params.slug);
+  const recipe = recipes.find((r) => r.slug === params.slug);
 
   if (!recipe) {
     return { notFound: true };

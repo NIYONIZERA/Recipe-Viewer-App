@@ -1,12 +1,10 @@
-
 // Home page with recipe list and search
 import Link from 'next/link';
 import { readFile } from 'fs/promises';
 import path from 'path';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import SearchBar from '../components/SearchBar';
 import { Recipe } from '../lib/types';
-import { getStoredRecipes } from '../lib/storage';
 
 // Fetch static recipes at build time
 export async function getStaticProps() {
@@ -16,40 +14,27 @@ export async function getStaticProps() {
 
   return {
     props: {
-      initialRecipes: recipes,
+      recipes: recipes,
     },
   };
 }
 
 interface HomeProps {
-  initialRecipes: Recipe[];
+  recipes: Recipe[];
 }
 
-export default function Home({ initialRecipes }: HomeProps) {
+export default function Home({ recipes }: HomeProps) {
   const [searchQuery, setSearchQuery] = useState('');
-  const [storedRecipes, setStoredRecipes] = useState<Recipe[]>([]);
-
-  // Fetch stored recipes on client-side only
-  useEffect(() => {
-    setStoredRecipes(getStoredRecipes());
-  }, []);
-
-  const allRecipes = [...initialRecipes, ...storedRecipes];
 
   // Filter recipes based on search query
-  const filteredRecipes = allRecipes.filter((recipe) =>
+  const filteredRecipes = recipes.filter((recipe) =>
     recipe.title.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
   return (
     <div className="min-h-screen bg-gray-100 p-6">
       <h1 className="text-3xl font-bold text-orange-600 mb-4 text-center">Recipe Viewer</h1>
-      <div className="flex justify-center mb-4">
-        <Link href="/add-recipe" className="bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700">
-          Add New Recipe
-        </Link>
-      </div>
-      <div className="flex justify-center">
+      <div className="flex justify-center mb-6">
         <SearchBar onSearch={setSearchQuery} />
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
