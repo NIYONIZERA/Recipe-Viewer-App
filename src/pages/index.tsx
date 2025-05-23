@@ -1,5 +1,5 @@
-// Home page with recipe list and search
 import Link from 'next/link';
+import Image from 'next/image';
 import { readFile } from 'fs/promises';
 import path from 'path';
 import { useState } from 'react';
@@ -67,15 +67,18 @@ export default function Home({ recipes }: HomeProps) {
                 className="block group"
                 passHref
               >
-                <div className="bg-white rounded-lg shadow-md overflow-hidden border border-transparent group-hover:border-orange-500 transition cursor-pointer">
-                  <img
-                    src={recipe.image}
-                    alt={recipe.title}
-                    className="w-full h-48 object-cover transition-transform group-hover:scale-105"
-                  />
+                <div className="bg-white rounded-lg shadow-md overflow-hidden border border-transparent group-hover:border-orange-500 hover:shadow-xl transition-transform transform hover:scale-105 cursor-pointer">
+                  <div className="relative w-full h-48">
+                    <Image
+                      src={recipe.image}
+                      alt={recipe.title}
+                      layout="fill"
+                      objectFit="cover"
+                      className="transition-transform group-hover:scale-105"
+                    />
+                  </div>
                   <div className="p-5">
                     <h2 className="text-2xl font-semibold text-gray-900">{recipe.title}</h2>
-
                   </div>
                 </div>
               </Link>
@@ -84,7 +87,7 @@ export default function Home({ recipes }: HomeProps) {
         ) : (
           <div className="max-w-md mx-auto mt-20 bg-white p-8 rounded-lg shadow-md text-center">
             <p className="text-gray-600 text-lg mb-4">
-              No recipes found matching "<span className="italic">{searchQuery}</span>".
+              No recipes found matching &quot;<span className="italic">{searchQuery}</span>&quot;.
             </p>
             <button
               onClick={() => setSearchQuery('')}
@@ -98,4 +101,5 @@ export default function Home({ recipes }: HomeProps) {
     </div>
   );
 }
+
 
